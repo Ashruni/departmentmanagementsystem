@@ -1,2 +1,2 @@
 # departmentmanagementsystem
-Its a management system
+Its a management system for students
