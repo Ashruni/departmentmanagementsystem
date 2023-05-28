@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(77, 120, 106)">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(77, 120, 106);">
+
+
+
+<form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+    <table style="margin-left:460px;margin-top:-100px;">
+        <h1 style="margin-left:460px;margin-top:40px;" >REGISTER A STAFF HERE</h1>
+        <tr><th> <label> Name</label></th>
+            <td><input type="text" name="staffname" placeholder="Name"></td></tr><br>
+        <tr><th> <label>Email</label></th>
+            <td><input type="email" name="staffeid" placeholder=" Emailid"></td></tr><br>
+    <tr><th> <label>Set password </label></th>
+      <td><input type="password" name="staffpassword" placeholder="Password"></td></tr><br>
+   <tr><th> <label> Confirm password</label></th>
+     <td> <input type="password" name="staffconfirmationps" placeholder="confirm"></td></tr><br>
+    <tr><th> <label>classteacher batch</label></th>
+       <td><input type="text" name="classteacherbatch" placeholder="class teacher batch"></td></tr><br>
+    <tr><th> <label> Semester</label></th>
+        <td><input type="number" name="staffsemeter" placeholder="semester"></td></tr><br>
+      <tr><th><td><input type="submit" value="Submit"></td></th></tr>
+    </table>
+</form>
+
+
+</body>
+</html>

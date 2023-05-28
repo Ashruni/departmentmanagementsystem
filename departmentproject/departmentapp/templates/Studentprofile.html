@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #a{
+            margin-left:50px;
+
+        }
+        #b{
+            margin-left:800px;
+            margin-top:5px;
+        }
+        #c{
+            margin-left:20px;
+            margin-top:8px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(38, 61, 78);">
+    <nav style="margin-left:-8px;background-color:rgb(13, 33, 48);height:50px;width:1290px;margin-top:-20px;" class="container-fluid">
+        <div >
+         <h3 style="margin-top:20px;"> <a  style="text-decoration: none; color:rgb(225, 226, 157);" href="#">{{snm}} : S{{sb}} batch</a>
+          <a id="b" style="text-decoration: none;color:rgb(240, 241, 168);"  href="http://127.0.0.1:8000/departmentapp/studentnoti/{{sid}}">EVENTS</a>
+          <a id="c"  style="text-decoration: none;color:rgb(240, 241, 168);"  href="http://127.0.0.1:8000/departmentapp/slogout/">LOGOUT</a>
+         </h3> </div>
+      </nav>
+      <table style="height:350px;margin-top:-270px;border-radius:10px;width:450px;background-color:rgb(187, 205, 174);margin-left:400px;border-color:white;border-style:solid;" border="5px" >
+        <div style="text-align:center;margin-top:70px;"><br><br><h1 style="text-decoration:underline;"></h1>
+            <h1>Welcome </h1>
+       <h2 style="margin-top:10px;"><a style="text-decoration:none;color:red;" href="http://127.0.0.1:8000/departmentapp/studentprofile/{{sid}}">1.View Your Profile</a><br>
+            <h2><a style="text-decoration:none;color:red;" href="http://127.0.0.1:8000/departmentapp/studentacademics/{{sid}}">2.View Internal Marks</a><br>
+                <h2><a style="text-decoration:none;color:red;" href="http://127.0.0.1:8000/departmentapp/viewstudmat/{{sid}}">3.View study materials</a><br>
+                    <h2><a style="text-decoration:none;color:red;" href="http://127.0.0.1:8000/departmentapp/attendancedisplays/{{sid}}">4.View attendance report</a><br>
+                </h2>
+
+        </div>
+</table>
+
+      </div>
+
+</body>
+</html>

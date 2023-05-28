@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <style>
+        #a{
+            margin-left:50px;
+
+        }
+        #b{
+            margin-left:800px;
+            margin-top:5px;
+        }
+        #c{
+            margin-left:20px;
+            margin-top:8px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body style="background-color:rgb(38, 61, 78);">
+<form  method="get">
+    <nav style="margin-left:-8px;background-color:rgb(49, 70, 86);height:50px;width:1280px;margin-top:-20px;" class="container-fluid">
+        <div >
+
+         <h3> <a  style="text-decoration: none; color:rgb(225, 226, 157);" href="#">Welcome, {{stnm}} : S{{stb}} batch</a>
+          <a id="b" style="text-decoration: none;color:rgb(240, 241, 168);"  href="http://127.0.0.1:8000/departmentapp/studentnoti/{{s}}">EVENTS</a>
+          <a id="c"  style="text-decoration: none;color:rgb(240, 241, 168);"  href="http://127.0.0.1:8000/departmentapp/logout/">LOGOUT</a>
+         </h3> </div>
+      </nav>
+    <h1 style="text-align:center;margin-top:60px;color:rgb(225, 226, 157);" >SERIES MARKS</h1>
+      <table style="height:200px;width:1000px;background-color:rgb(187, 205, 174);margin-left:150px;border-color:black;border-style:solid;margin-top:50px;" border="1px;">
+<!--          <tr style="font-size:20px;"><th></th>-->
+<!--              <th> Name of the student </th>-->
+          {% for i in assi %}
+              <th> {{i.assgsub1}}  </th>
+              <th> {{i.assgsub2}}  </th>
+              <th> {{i.assgsub3}}  </th>
+              <th> {{i.assgsub4}}  </th>
+{% endfor %}
+          </tr>
+          <tr style="font-size:20px;text-align:center;">
+<!--          <td><img style="height:200px;width:200px;margin-top:20px;border-radius:100px;margin-left:20px;"  src="{% static i %}"></td>-->
+{% for i in b %}
+              <td> {{i.suba}} </td>
+              <td> {{i.subb}} </td>
+              <td> {{i.subc}} </td>
+              <td> {{i.subd}}</td>
+{% endfor %}
+          </tr>
+
+              </div>
+
+
+        </div>
+
+
+</table>
+
+      <h1 style="text-align:center;margin-top:60px;color:rgb(225, 226, 157);" >ASIGNMENT MARKS</h1>
+
+      <table style="height:200px;width:1000px;background-color:rgb(187, 205, 174);margin-left:150px;border-color:black;border-style:solid;margin-top:50px;" border="1px;">
+<!--          <tr style="font-size:20px;"><th></th>-->
+           {% for i in assi %}
+              <th> {{i.assgsub1}} </th>
+              <th> {{i.assgsub2}}</th>
+              <th> {{i.assgsub3}}</th>
+              <th> {{i.assgsub4}}</th>
+{% endfor %}
+<!--              <th> Batch </th>-->
+<!--              <th> Semester </th>-->
+<!--              <th> Email </th>-->
+<!--              <th> Class Teacher </th>-->
+
+          </tr>
+          <tr style="font-size:20px;text-align:center;">
+<!--          <td><img style="height:200px;width:200px;margin-top:20px;border-radius:100px;margin-left:20px;"  src="{% static i %}"></td>-->
+ {% for i in assu %}
+              <td> {{i.assignmentm1}} </td>
+              <td> {{i.assignmentm2}} </td>
+              <td> {{i.assignmentm3}} </td>
+              <td> {{i.assignmentm4}} </td>
+ {% endfor %}
+
+          </tr>
+
+              </div>
+
+
+        </div>
+
+
+</table>
+      <h1 style="text-align:center;margin-top:60px;color:rgb(225, 226, 157);" >INTERNAL MARKS( min 45 )</h1>
+
+      <table style="height:200px;width:1000px;background-color:rgb(187, 205, 174);margin-left:150px;border-color:black;border-style:solid;margin-top:50px;" border="1px;">
+{% for i in assi %}
+              <th> {{i.assgsub1}} </th>
+              <th> {{i.assgsub2}}</th>
+              <th> {{i.assgsub3}}</th>
+              <th> {{i.assgsub4}}</th>
+{% endfor %}
+
+          </tr>
+          <tr style="font-size:20px;text-align:center;">
+<!--              <td><img style="height:200px;width:200px;margin-top:20px;border-radius:100px;margin-left:20px;"  src="{% static i %}"></td>-->
+              <td> {{f1}} </td>
+              <td> {{f2}} </td>
+              <td> {{f3}} </td>
+              <td> {{f4}} </td>
+<!--              <td> {{n}} </td>-->
+<!--              <td> {{o}} </td>-->
+<!--              <td> {{p}} </td>-->
+<!--              <td> {{q}} </td>-->
+
+          </tr>
+
+              </div>
+
+
+        </div>
+
+
+</table>
+<!--    <a href="http://127.0.0.1:8000/departmentapp/studentlogin/#"><h2 style="text-align:center;margin-top:50px;" >BACK HOME</h2></a>-->
+
+     </form>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+from django.urls import path
+from.views import*
+
+urlpatterns=[
+#path('staffreg/',staffregistration),
+path('studentlogin/',studentlogin),
+path('loginpage/',index),
+path('2017batch/<int:id>/',batch1),
+path('sem8mupload/<int:id>/',semestereightsubjects),
+path('semassignments8/<int:id>/',semassignment8),
+path('studentprofile/<int:id>/',studentprofileview),
+path('studentacademics/<int:id>/',internalmarks8),
+path('logout/',logout_view),
+path('slogout/',stlogout_view),
+path('studentnoti/<int:id>/',stusernotificationf),
+path('teachernotification/<int:id>/',teachernotifications),
+path('edidelete/<int:id>/',editdel),
+path('studentedits/<int:id>/',studenteditpage),
+path('studentasstedit/<int:id>/',studentasstmarksedit),
+path('editasgmessagespage/',editasgmessages),
+path('editseriesmessagepage/',editseriesmessage),
+path('seriesmarkuploadsstatuspage/<int:id>/',seriesmarkuploadsstatuss),
+path('pdfupload/<int:id>/',pdfsuploads),
+path('viewstudmat/<int:id>/',studymaterialview),
+path('studentattendanceuploads/<int:id>/',studentattendanceupload),
+path('attendancedisplays/<int:id>/',attendancedisplay),
+path('adminprofile/',adminpro),
+path('adminlogin/',adminplogin),
+path('studentdetailuploads/',studenttdetailbadmin),
+path('staffdetailuploads/',staffdetailadmin),
+path('studentadminnot/',adminstunoti),
+path('teacheradminnoti/',adminttunoti),
+#path('editattencesofstu/<int:id>/',editattencesofst),
+#path('assignmentmarks/<int:id>/',assignmentmarkandsub),
+#path('semsubother/',departmentothersemestersub),
+
+]

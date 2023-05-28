@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:rgb(38, 61, 78);">
+<table style="height:200px;width:1000px;background-color:rgb(187, 205, 174);margin-left:150px;border-color:white;border-style:solid;margin-top:50px;border-radius:10px;" border="5px;">
+<tr>
+    <th>NAME</th>
+    <th>ROLLNO</th>
+    <th>DATE</th>
+    <th>STATUS</th>
+</tr>
+
+{% for i in at %}
+<tr>
+     <td>{{sn}}</td>
+    <td>{{i.rollno}}</td>
+    <td>{{i.date}}</td>
+    <td>{{i.status}}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

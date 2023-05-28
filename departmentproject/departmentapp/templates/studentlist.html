@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color:rgb(91, 8, 47);">
+<div style="text-align:center;" >
+    <h1 style="text-decoration:underline;margin-top:50px;color:white;"> Students  list</h1>
+    <form method="get">
+
+     <table border="2px" style="border-color:black;margin-left:209px;background-color:rgb(205, 205, 164);">
+
+        <tr >
+
+            <th>Name</th>
+        <th>Rollno</th>
+        <th>Email id</th>
+            <th>Semester</th>
+<!--            <th>Change</th>-->
+        </tr>
+         {% for i in b %}
+         <tr style="color:red;">
+         <td>{{ i.studentname }}</td>
+         <td>{{ i.studentrollno }}</td>
+         <td>{{ i.studentemail }}</td>
+             <td>{{i.studentsemester}}</td>
+             <td><a href="http://127.0.0.1:8000/departmentapp/sem8mupload/{{i.id}}/">Add series marks</a></td><td><a href="http://127.0.0.1:8000/departmentapp/semassignments8/{{i.id}}">Add Assignment marks</a></td>
+             <td><a href="http://127.0.0.1:8000/departmentapp/studentedits/{{i.id}}">Edit series marks</a></td>
+             <td><a href="http://127.0.0.1:8000/departmentapp/studentasstedit/{{i.id}}">Edit Assignment marks</a></td>
+
+         </tr>
+         </tr>
+         {% endfor %}
+
+
+         </table>
+
+    </form>
+</div>
+</body>
+</html>

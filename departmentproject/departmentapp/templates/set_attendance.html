@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Set Attendance for {{ student.name }}</h1>
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+  </div>
+  <div>
+    <label>Status:</label>
+    <input type="radio" id="present" name="status" value="present">
+    <label for="present">Present</label>
+    <input type="radio" id="absent" name="status" value="absent">
+    <label for="absent">Absent</label>
+    <input type="radio" id="late" name="status" value="late">
+    <label for="late">Late</label>
+  </div>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

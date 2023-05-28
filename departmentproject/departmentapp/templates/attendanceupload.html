@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(91, 8, 47);">
+    <h1 style="margin-left:490px;color:white;margin-top:90px;">Upload Attendance </h1>
+<form  style="margin-left:390px;" method="post">{% csrf_token %}
+    <table style="background-color:rgb(205, 205, 164);font-size:20px;border-color:white;" border="2px;">
+
+        <tr>
+<!--            <th>Student name</th>-->
+<!--            <th>Student Rollno</th>-->
+<!--            <th>Department</th>-->
+<!--            <th>Semester</th>-->
+            <th>Date</th>
+            <th>Rollno</th>
+            <th>Attendance</th>
+        </tr>
+        <tr>
+<!--            <td>{{i.studentname}}</td>-->
+<!--            <td>{{i.studentrollno}}</td>-->
+<!--            <td>{{i.studentdeparment}}</td>-->
+<!--            <td>{{i.studentsemester}}</td>-->
+            <td><input name="date" type="date"></td>
+            <td><input name="rollno" type="text">Rollno</td>
+            <td> <select class="form-control" name="status">
+                <option>select attendance</option>
+                <option name="{{i.studentname}}" value="present">Present</option>
+                <option name="{{i.studentname}}" value="absent">Absent</option>
+                <option name="{{i.studentname}}" value="late">Late</option>
+            </select>
+            </td>
+
+<!--            <td><input type="radio" name="status" value="present">Present</td>-->
+<!--            <td><input type="radio" name="status" value="absent">ABsent</td>-->
+<!--            <td><input type="radio" name="status" value="late">Late</td>-->
+        </tr>
+ </table>
+    <input type="submit" value="Submit">
+
+         </form>
+<!--    <div style="text-align:center;width:100px;height:30px;background-color:white;margin-top:-90px;margin-left:700px;border-radius:20px;border-color:white;" border="5px">-->
+<!--        <h2><a href="http://127.0.0.1:8000/departmentapp/editattencesofstu/">Edit</a></h2>-->
+<!--        </div>-->
+
+</body>
+
+
+
+
+
+
+
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:rgb(38, 61, 78);>
+<table style="height:200px;width:1000px;background-color:rgb(187, 205, 174);margin-left:150px;border-color:white;border-style:solid;margin-top:50px;border-radius:10px;" border="5px;">
+<tr>
+    <th>NAME</th>
+    <th>ROLLNO</th>
+    <th>DATE</th>
+    <th>STATUS</th>
+</tr>
+
+{% for i in at %}
+<tr>
+    <td>{{sn}}</td>
+    <td>{{i.rollno}}</td>
+    <td>{{i.date}}</td>
+    <td>{{i.status}}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>-->

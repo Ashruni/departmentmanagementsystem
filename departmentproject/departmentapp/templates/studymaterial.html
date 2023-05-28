@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color:rgb(91, 8, 47);">
+<div style="text-align:center;"  >
+    <h1 style="text-decoration:underline;margin-top:100px;color:white;"> Study Material upload</h1>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        <div style="width:400px;height:150px;background-color:rgb(192, 162, 162);margin-left:420px;margin-top:50px;border-radius:20px;border-color:white;" border="5px">
+            <table>
+                <tr><th>PDF NAME </th>
+                <td><input type="text" placeholder="file name" name="filename"><td></tr>
+                <tr><th>UPLOAD</th>
+                <td><input type="file" placeholder="upload pdf here" name="pdfs" ></td></tr>
+                <tr><th>Date</th>
+                <td><input type="date" placeholder="Todays date" name="date" ></td></tr>
+                <tr><th>Semester</th>
+                <td><input type="number" placeholder="Class semester" name="sem" ></td></tr>
+                <tr><th><td><input  type="submit" style="background-color:rgb(7, 82, 186);border-radius:10px;"></td></th></tr>
+            </table>
+        </div>
+    </form>
+</div>
+</body>
+</html>

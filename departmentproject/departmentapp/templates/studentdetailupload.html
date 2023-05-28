@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(77, 120, 106)">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+    <table style="margin-left:460px;margin-top:-160px;">
+        <h1 style="margin-left:460px;margin-top:40PX;" >REGISTER A STUDENT</h1>
+        <tr><th> <label> Name</label></th>
+            <td><input type="text" name="studentname" placeholder="Student Name"></td></tr><br>
+        <tr><th> <label> Rollno</label></th>
+            <td><input type="text" name="studentrollno" placeholder="Student Rollno"></td></tr><br>
+    <tr><th> <label> Image</label></th>
+      <td><input type="file" name="studentimage" placeholder="Student Image"></td></tr><br>
+   <tr><th> <label> Department</label></th>
+     <td> <input type="text" name="studentdeparment" placeholder="Student Department"></td></tr><br>
+    <tr><th> <label> DOB</label></th>
+       <td><input type="date" name="studentdob" placeholder="Student DOB"></td></tr><br>
+    <tr><th> <label> Batch</label></th>
+        <td><input type="text" name="studentbatch" placeholder="Student Batch"></td></tr><br>
+   <tr><th> <label>Semester</label></th>
+       <td><input type="number" name="studentsemester" placeholder="Student Semester"></td></tr><br>
+    <tr><th> <label> Password</label></th>
+       <td><input type="text" name="studentpassword" placeholder="Student  Password"></td></tr><br>
+    <tr><th> <label>Email</label></th>
+        <td><input type="email" name="studentemail" placeholder="Student Email"></td></tr><br>
+    <th> <label> Class teacher</label></th>
+        <td><input type="text" name="studentclassteacher" placeholder="Student Class teacher"></td></tr><br>
+      <tr><th><td><input type="submit" value="Submit"></td></th></tr>
+    </table>
+</form>
+
+
+</body>
+</html>

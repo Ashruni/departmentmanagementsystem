@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(88, 132, 99);">
+    <form method="post">{% csrf_token %}
+        <div style="border-radius:20px;height:275px;width:400px;background-color:rgb(221, 230, 186);margin-left:420px;margin-top:120px;" class="border border-3">
+            <br><h1 style="text-align:center;text-decoration:underline;">Enter Your Login Details</h1>
+                <table style="margin-left:50px;margin-top:10px;font-size:25px;color:red;" >
+        <tr>
+            <th><label>username</label></th>
+        <td><input type="text" placeholder="enter your username" name="username"></td></tr>
+        <tr><th><label>Password</label></th>
+        <td><input type="password" placeholder="enter your correct password" name="password"></td></tr>
+        <tr><th><td><input type="submit"></td></th></tr>
+        </table>
+        </div>
+    </form>
+
+</body>
+</html>

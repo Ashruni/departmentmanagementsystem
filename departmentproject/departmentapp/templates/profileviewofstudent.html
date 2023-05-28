@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <style>
+        #a{
+            margin-left:50px;
+
+        }
+        #b{
+            margin-left:800px;
+            margin-top:5px;
+        }
+        #c{
+            margin-left:20px;
+            margin-top:8px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body style="background-color:rgb(38, 61, 78);">
+<form  method="get">
+    <nav style="margin-left:-8px;background-color:rgb(13, 33, 48);height:50px;width:1280px;margin-top:-20px;" class="container-fluid">
+        <div >
+            {% for i,j,k,l,m,n,o,p,q in combining %}
+         <h3> <a  style="text-decoration: none; color:rgb(225, 226, 157);" href="#">Welcome, {{j}} : S{{o}} batch</a>
+          <a id="b" style="text-decoration: none;color:rgb(240, 241, 168);"  href="#">EVENTS</a>
+          <a id="c"  style="text-decoration: none;color:rgb(240, 241, 168);"  href="http://127.0.0.1:8000/departmentapp/slogout/">LOGOUT</a>
+         </h3> </div>
+      </nav>
+    <h1 style="text-align:center;margin-top:60px;color:rgb(225, 226, 157);" >STUDENT PROFILE</h1>
+      <table style="height:200px;width:1000px;background-color:rgb(187, 205, 174);margin-left:150px;border-color:white;border-style:solid;margin-top:50px;border-radius:10px;" border="5px;">
+          <tr style="font-size:20px;color:rgb(7, 0, 99);"><th>Profile photo</th>
+              <th> Name of the student </th>
+              <th> Roll No </th>
+              <th> Department </th>
+              <th> DOB </th>
+              <th> Batch </th>
+              <th> Semester </th>
+              <th> Email </th>
+              <th> Class Teacher </th>
+
+          </tr>
+          <tr style="font-size:20px;text-align:center;color:black;">
+              <td><img style="height:200px;width:200px;margin-top:20px;border-radius:100px;border-color:white;" border="4px"  src="{% static i %}"></td>
+              <td> {{j}} </td>
+              <td> {{k}} </td>
+              <td> {{l}} </td>
+              <td> {{m}} </td>
+              <td> {{n}} </td>
+              <td> {{o}} </td>
+              <td> {{p}} </td>
+              <td> {{q}} </td>
+
+          </tr>
+
+              </div>
+            {% endfor %}
+
+        </div>
+
+
+</table>
+<!--    <a href="http://127.0.0.1:8000/departmentapp/studentlogin/#"><h2 style="text-align:center;margin-top:50px;" >BACK HOME</h2></a>-->
+
+     </form>
+
+</body>
+</html>

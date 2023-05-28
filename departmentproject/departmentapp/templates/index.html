@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://kit.fontawesome.com/844fd7bfe8.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<body style="background-color:rgb(192, 211, 228);">
+
+    <div  style="height:524px;width:900px;margin-left:180px; margin-top:30px; background-color:rgb(178, 201, 223);border-color: rgb(247, 247, 247);border-style:solid;">
+        <img style="width:600px;" src="{% static 'departmentapp/images/mitlogo.png' %}">
+        <div style="margin-top:-130px;margin-left:635px;">
+            <div>
+            <form method="post">{% csrf_token %}
+            <h6 style="margin-bottom:2px;">Enter Staff details</h6>
+            <input type="text" style="width:90px;height:20px;" name="staffnamel" placeholder="Username">
+            <input type="password" style="width:75px;height:20px;" name="staffpasswordl" placeholder="Password" >
+            <input type="submit" style="background-color:rgb(220, 226, 104);border-radius:10px;border-color:rgb(220, 226, 104);"><br>
+            </form>
+            </div>
+
+          <a href="http://127.0.0.1:8000/departmentapp/studentlogin/" style="color:red;font-size:14px;">Student login</a>
+            <a href="http://127.0.0.1:8000/departmentapp/adminlogin/" style="color:black;font-size:14px;">Admin login</a>
+
+
+            <div class="carousel-slide" data-bs-ride="carousel">
+
+                <div class="carousel-item active  ">
+                    <img style="margin-left:-635px;margin-top:50px;width:895px;height:383px;" src="{% static 'departmentapp/images/mi.jpg' %}"></div>
+                 <div class="carousel-item " >
+                    <img style="margin-left:-635px;margin-top:50px;width:895px;height:385px;" src="{% static 'departmentapp/images/mitstudents.jpg' %}"></div>
+
+                    <!--  -->
+            </div>
+            </div>
+        </div>
+        </div>
+
+</body>

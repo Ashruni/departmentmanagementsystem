@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #a{
+            margin-left:50px;
+
+        }
+        #b{
+            margin-left:800px;
+            margin-top:5px;
+        }
+        #c{
+            margin-left:20px;
+            margin-top:8px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(91, 8, 47);">
+    <nav style="margin-left:-8px;background-color:rgb(66, 5, 33);height:50px;width:1290px;margin-top:-20px;" class="container-fluid">
+        <div >
+         <h3> <a  style="text-decoration: none; color:rgb(225, 226, 157);" href="#">Welcome, {{nm}} : S{{sem}} Faculty</a>
+          <a id="b" style="text-decoration: none;color:rgb(240, 241, 168);"  href="#">EVENTS</a>
+          <a id="c"  style="text-decoration: none;color:rgb(240, 241, 168);"  href="http://127.0.0.1:8000/departmentapp/logout/">LOGOUT</a>
+         </h3> </div>
+      </nav>
+      <table style="height:150px;margin-top:80px;width:850px;background-color:rgb(205, 205, 164);margin-left:200px;border-color:rgb(7, 7, 7);border-style:solid;" border="1px">
+     <tr>
+         <th>Important Messages</th>
+         <th>Time</th>
+     </tr>
+          <tr>{% for i in a %}
+              <td>{{i.content}}</td>
+              <td>{{i.tnottime}}</td>
+          </tr>
+
+              {% endfor %}
+</table>
+
+
+</body>
+</html>
